@@ -14,16 +14,15 @@
       integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
       crossorigin="anonymous"
     ></script>
+    <link rel ="stylesheet" href="style.css"></linkrel>
 
     <title>Document</title>
   </head>
   <body>
-    <h1>Загрузить все актальные товары в наличии</h1>
-    <button onclick="showTable()">Загрузить</button>
-    <hr />
-    <div id="filters">
-      <div class="category">
-        <h2>Категория</h2>
+    <h1 class="badge bg-primary text-wrap" style="width: 66rem; font-size: large;">Загрузить все актальные товары в наличии c сайта Fakestoreapi.com</h1>
+    <div class=""><button class="btn btn-primary" width="500" onclick="showTable()">Загрузить</button></div>
+        <span class="filtersbar" id="filters">
+              <h2>Категория</h2>
         <select id="categoryid">
           <option value="hide">-- Категория --</option>
           <option value="men's clothing">men's clothing</option>
@@ -31,20 +30,20 @@
           <option value="electronics">electronics</option>
           <option value="women's clothing">women's clothing</option>
         </select>
-      </div>
-
-      <div class="price">
-        <h2>Price</h2>
-        <div class="price-input">
-          <input id="minprice" type="text" value="" />&nbsp;-&nbsp;
-        </div>
-        <div class="price-input">
-          <input id="maxprice" type="text" value="" />&nbsp;usd&nbsp;
-        </div>
-        <button id="submitprice" type="submit" onclick="loadGoods()">OK</button>
-      </div>
-    </div>
-
+      </span>
+      
+      <span class="price">
+        <h2>Цена</h2>
+        <span class="price-input">
+          <input id="minprice" type="text" value="" />от USD
+        </span>
+        <span class="price-input">
+          <input id="maxprice" type="text" value="" />до, USD
+        </span>
+        <button class="btn btn-primary" id="submitprice" type="submit" onclick="loadGoods()">Применить фильтр</button>
+      </span>
+    </span>
+    
     <div id="goods"></div>
     <script src="app.js" defer></script>
   </body>
